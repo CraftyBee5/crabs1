@@ -16,6 +16,7 @@ xCapt = 1000;
 yCapt = 1200;
 thetaCapt = -pi/2;
 sizeCapt = 50;
+
 %sjdnfkenfseofksokndkvnv
 % Draw the captain and initialize graphics handles
 %*********************************************************
