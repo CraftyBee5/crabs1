@@ -14,7 +14,7 @@ function crabs ()
 % move down, increase x to move right, etc...
 xCapt = 1000;
 yCapt = 900;
-thetaCapt = -pi/2;
+thetaCapt = pi/2;
 sizeCapt = 50;
 
 %sjdnfkenfseofksokndkvnv
