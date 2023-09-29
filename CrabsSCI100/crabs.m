@@ -13,7 +13,7 @@ function crabs ()
 % Changing the x and y by different values will move him, increase y to make him
 % move down, increase x to move right, etc...
 xCapt = 1000;
-yCapt = 1200;
+yCapt = 900;
 thetaCapt = -pi/2;
 sizeCapt = 50;
 
