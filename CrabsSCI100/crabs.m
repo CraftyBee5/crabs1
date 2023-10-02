@@ -17,11 +17,38 @@ yCapt = 900;
 thetaCapt = pi/2;
 sizeCapt = 50;
 
-%sjdnfkenfseofksokndkvnv
 % Draw the captain and initialize graphics handles
 %*********************************************************
 % Put your call to drawCapt() here ..... You must give drawCapt its
 % input and output arguments.
-captainGraphics = drawCapt (xCapt , yCapt , thetaCapt , sizeCapt)
+captainGraphics = drawCapt (xCapt , yCapt , thetaCapt , sizeCapt);
+
+%commands for input and movement
+cmd="null";
+
+while(cmd != "Q")
+
+%read keyboard
+cmd = kbhit();
+
+  if(cmd=="w" || cmd=="a" || cmd=="d")
+
+%erase old captain
+    for (i=1:length(captainGraphics))
+      set(captainGraphics(i),'Visible','off');
+    endfor
+
+    %moves captain
+    [xCapt,yCapt,thetaCapt]=moveCapt(cmd,xCapt,yCapt,thetaCapt);
+
+    %draw new captain
+    captainGraphics = drawCapt (xCapt , yCapt , thetaCapt , sizeCapt);
+
+
+  endif;
+
+endwhile
+
+close all
 %*******************************************************
 endfunction
