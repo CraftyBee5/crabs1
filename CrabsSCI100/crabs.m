@@ -14,14 +14,20 @@ function crabs ()
 % move down, increase x to move right, etc...
 xCapt = 1000;
 yCapt = 900;
-thetaCapt = pi/2;
+thetaCapt = -pi/2;
 sizeCapt = 50;
+
+xCrab = 1000;
+yCrab = 900;
+thetaCrab = -pi/2;
+sizeCrab = 50;
 
 % Draw the captain and initialize graphics handles
 %*********************************************************
 % Put your call to drawCapt() here ..... You must give drawCapt its
 % input and output arguments.
 captainGraphics = drawCapt (xCapt , yCapt , thetaCapt , sizeCapt);
+crabGraphics = drawCrab (xCrab , yCrab , thetaCrab , sizeCrab);
 
 %commands for input and movement
 cmd="null";
@@ -39,7 +45,7 @@ cmd = kbhit();
     endfor
 
     %moves captain
-    [xCapt,yCapt,thetaCapt]=moveCapt(cmd,xCapt,yCapt,thetaCapt);
+    [xCapt,yCapt,thetaCapt]=moveCapt(cmd,xCapt,yCapt,thetaCapt,mapWidth,mapHeight);
 
     %draw new captain
     captainGraphics = drawCapt (xCapt , yCapt , thetaCapt , sizeCapt);
