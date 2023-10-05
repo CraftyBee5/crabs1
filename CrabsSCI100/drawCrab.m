@@ -16,7 +16,7 @@ crab = getCrab(sizeCrab);
 
 % This calls the function getTranslation with the values of the x and y
 % this function then returns a matrix of new values
-T = getTranslation(xCapt,yCapt);
+T = getTranslation(xCrab,yCrab);
 
 % This multiplies the past values by the newer matrices in order to change the
 % coordinate of the captains points

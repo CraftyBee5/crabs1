@@ -1,10 +1,10 @@
 
-function inBounds = isOnMap (x, y, width, height, buffer)
+function inBounds = isOnMap (x, y, width, height)
 
-if (x> 0 && x < width & y>0 && y<height) {
-  mapCheck = 1;
+if (x> 0 && x < width && y>0 && y<height) {
+  inBounds = 1;
 else
-  mapCheck = 0;
+  inBounds = 0;
 endif
 
 endfunction

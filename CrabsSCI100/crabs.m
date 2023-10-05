@@ -27,7 +27,7 @@ sizeCrab = 50;
 % Put your call to drawCapt() here ..... You must give drawCapt its
 % input and output arguments.
 captainGraphics = drawCapt (xCapt , yCapt , thetaCapt , sizeCapt);
-crabGraphics = drawCrab (xCrab , yCrab , thetaCrab , sizeCrab);
+%crabGraphics = drawCrab (xCrab , yCrab , thetaCrab , sizeCrab);
 
 %commands for input and movement
 cmd="null";
