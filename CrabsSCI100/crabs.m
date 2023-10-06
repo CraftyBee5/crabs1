@@ -39,7 +39,7 @@ cmd = kbhit();
 
   if(cmd=="w" || cmd=="a" || cmd=="d")
 
-%erase old captain
+    %erase old captain
     for (i=1:length(captainGraphics))
       set(captainGraphics(i),'Visible','off');
     endfor

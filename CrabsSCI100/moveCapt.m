@@ -12,7 +12,7 @@ if (cmd=="w")
   xTemp = x + dStep*cos(theta);
   yTemp = y + dStep*sin(theta);
 
-  if(isOnMap(xTemp,yTemp,width,height))
+  if(x> 0 && x < width && y>0 && y<height)
     xCapt=xTemp;
     yCapt=yTemp;
    else
