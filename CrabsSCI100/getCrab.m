@@ -1,48 +1,23 @@
-
-
 function retval = getCrab (input1, input2)
 
+%main body
+crabPt1 = [s / 2 ;s ;1 ];
+crabPt2 = [s / 2 ;-s ;1 ];
+crabPt3 = [-s / 2 ;-s ;1 ];
+crabPt4 = [-s / 2 ;s ;1 ];
 
+%left legs
+crabPt5 = [s/2 ;s*2 ;1 ];
+crabPt6 = [0 ;s ;1 ];
+crabPt7 = [0 ;s*2 ;1 ];
+crabPt8 = [-s ;s*2 ;1 ];
 
-%left side
-captPt1 = [captSize;captSize;1]; % left shoulder
-%captPt2=[-captSize;captSize;1]; % left waist
-captPt3=[-3*captSize;captSize;1]; %left foot
+%right legs
+crabPt9 = [s/2 ;-s*2 ;1 ];
+crabPt10 = [0 ;-s ;1 ];
+crabPt11 = [0 ;-s*2 ;1 ];
+crabPt12 = [-s ;-s*2 ;1 ];
 
-%right side
-captPt4=[-3*captSize;-captSize;1];%right foot
-%captPt5=[-captSize;-captSize;1]; %right waist
-captPt6=[captSize;-captSize;1]; %right shoulder
-
-%head
-%captPt7 = [ captSize; -captSize/2; 1]; %right neck
-%captPt8 = [ 2 *captSize; -captSize/2; 1]; %right top of head
-%captPt9 = [ 2*captSize; captSize/2; 1]; %left top of head
-%captPt10 = [ captSize; captSize/2; 1]; %left neck
-
-%hands
-%captPt11 = [ 0; 2*captSize; 1]; %left hand
-%captPt12 = [ 0; -2*captSize; 1]; %right hand
-
-%spear
-%captPt13=[ 3*captSize; -2*captSize; 1]; %spear point
-%captPt14=[ -captSize; -2*captSize; 1]; %spear end
-
-captPt15=[ 3*captSize; 2*captSize; 1]; %spear point other side
-captPt16=[ -captSize; 2*captSize; 1]; %spear end other side
-
-%elbows
-%captPt17=[-0.75*captSize;1.5*captSize;1]; %right elbow
-%captPt18=[-0.75*captSize;-1.5*captSize;1]; %left elbow
-
-
-
-
-
-crab=[captPt1,captPt2,captPt3,captPt4,captPt5,captPt6,captPt7,captPt8,captPt9,captPt10,captPt11,captPt12,captPt13,captPt14]; %,captPt15,captPt16,captPt17,captPt18];
-
-
-
-
+crab = [crabPt1, crabPt2, crabPt3, crabPt4, crabPt5, crabPt6, crabPt7, crabPt8, crabPt9, crabPt10, crabPt11, crabPt12];
 
 endfunction
