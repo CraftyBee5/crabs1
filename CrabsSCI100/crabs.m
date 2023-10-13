@@ -27,7 +27,7 @@ sizeCrab = 50;
 % Put your call to drawCapt() here ..... You must give drawCapt its
 % input and output arguments.
 captainGraphics = drawCapt (xCapt , yCapt , thetaCapt , sizeCapt);
-%crabGraphics = drawCrab (xCrab , yCrab , thetaCrab , sizeCrab);
+crabGraphics = drawCrab (xCrab , yCrab , thetaCrab , sizeCrab);
 
 %commands for input and movement
 cmd="null";
@@ -49,12 +49,23 @@ cmd = kbhit();
 
     %draw new captain
     captainGraphics = drawCapt (xCapt , yCapt , thetaCapt , sizeCapt);
+  elseif(cmd == "i" || cmd=="j" || cmd=="l" || cmd=="," || cmd=="k")
 
+    for i=1:length(crabGraphics)
+      set(crabGraphics(i),'Visible','off');
+    endfor
+
+    %move crab
+    [xCrab,yCrab,thetaCrab]=moveCrab(cmd,xCrab,yCrab,thetaCrab,sizeCrab,mapHeight,mapWidth);
+
+    %draw new crab
+    crabGraphics=drawCrab(xCrab,yCrab,thetaCrab,sizeCrab);
 
   endif;
 
 endwhile
 
 close all
+clear
 %*******************************************************
 endfunction

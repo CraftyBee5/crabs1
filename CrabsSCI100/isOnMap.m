@@ -11,13 +11,14 @@ endif
 endfunction
 %}
 
-function inBounds = isOnMap(x,y,width,height,buffer)
+function inBounds = isOnMap(x,y,height,width,buffer)
 
-if( x > buffer && x < width-buffer && y > buffer && y < height-buffer)
-inBounds=1;
+%if( x > buffer && x < (width-buffer) && y > buffer && y < (height-buffer))
+if(x> 0 && x < width && y>0 && y<height)
+inBounds=true;
 
 else
-inBounds=0;
+inBounds=false;
 
 endif
 

@@ -1,4 +1,4 @@
-function retval = getCrab (input1, input2)
+function crab = getCrab (s)
 
 %main body
 crabPt1 = [s / 2 ;s ;1 ];

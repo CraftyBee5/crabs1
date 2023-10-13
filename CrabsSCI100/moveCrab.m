@@ -1,6 +1,7 @@
-function [xCrab,yCrab,thetaCrab] = moveCrab (cmd,x,y,theta,size,height,width,step)
+function [xCrab,yCrab,thetaCrab] = moveCrab (cmd,x,y,theta,size,height,width)
 
 dTheta = pi/6;
+step = 50;
 
 %Shuffle left
 if (cmd == "j")
@@ -9,11 +10,11 @@ if (cmd == "j")
 
   if(isOnMap(xTemp,yTemp,height,width,size))
     xCrab=xTemp;
-    yCrab=ytemp
+    yCrab=yTemp;
   else
     xCrab = x;
     yCrab = y;
-   endif
+  endif
 
   thetaCrab = theta;
 
@@ -22,9 +23,9 @@ elseif (cmd == "l")
   xTemp = x - step * sin(theta);
   yTemp = y + step * cos(theta);
 
-  if(isOnMap(xTemp,yTemp,size,height,width))
+  if(isOnMap(xTemp,yTemp,height,width,size))
     xCrab=xTemp;
-    yCrab=ytemp
+    yCrab=yTemp;
   else
     xCrab = x;
     yCrab = y;
@@ -37,9 +38,9 @@ elseif (cmd == "k")
   xTemp = x - step * cos(theta);
   yTemp = y - step * sin(theta);
 
-  if(isOnMap(xTemp,yTemp,size,height,width))
+  if(isOnMap(xTemp,yTemp,height,width,size))
     xCrab=xTemp;
-    yCrab=ytemp
+    yCrab=yTemp;
   else
     xCrab = x;
     yCrab = y;
@@ -51,7 +52,7 @@ elseif (cmd == "k")
 elseif(cmd == "i")
   xCrab = x;
   yCrab = y;
-  thetaCrab = theta;
+  thetaCrab = theta + dTheta;
 
 %Turn left
 elseif(cmd == ",")
