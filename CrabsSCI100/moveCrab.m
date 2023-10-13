@@ -7,7 +7,7 @@ if (cmd == "j")
   xTemp = x + step * sin(theta);
   yTemp = y - step * cos(theta);
 
-  if(isOnMap(xTemp,yTemp,size,height,width))
+  if(isOnMap(xTemp,yTemp,height,width,size))
     xCrab=xTemp;
     yCrab=ytemp
   else
