@@ -1,4 +1,4 @@
-function crabs ()
+function crabs (level)
 % Crabs is a kids computer game where a fisherman, called the captain,
 % hunts for a very clever and powerful crab.
 
@@ -22,15 +22,39 @@ yCrab = 900;
 thetaCrab = -pi/2;
 sizeCrab = 50;
 
+xJelly=rand*mapWidth;
+yJelly=0;
+thetaJelly = -pi/2;
+sizeJelly = 25;
+
 % Draw the captain and initialize graphics handles
 %*********************************************************
 % Put your call to drawCapt() here ..... You must give drawCapt its
 % input and output arguments.
 captainGraphics = drawCapt (xCapt , yCapt , thetaCapt , sizeCapt);
 crabGraphics = drawCrab (xCrab , yCrab , thetaCrab , sizeCrab);
+jellyGraphics = drawJelly(xJelly, yJelly, thetaJelly, sizeJelly);
 
 %commands for input and movement
-cmd="null";
+%cmd="null";
+
+while (1)
+
+  for i=1:length(jellyGraphics)
+    delete (jellyGraphics(i));
+    endofr
+
+    %move jelly
+
+    %redraw jelly
+
+
+
+    %DO THIS FOR CRAB AS WELL
+
+    pause(0.1);
+  endwhile
+
 
 while(cmd != "Q")
 
