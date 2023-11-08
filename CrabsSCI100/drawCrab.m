@@ -25,6 +25,8 @@ pt10=crab( : , 10);
 pt11=crab( : , 11);
 pt12=crab( : , 12);
 
+%"r" = [1 0 0];
+
 crabGraphics(1) = drawLine(pt1 , pt2 , "r");
 crabGraphics(2) = drawLine(pt2 , pt3 , "r");
 crabGraphics(3) = drawLine(pt3 , pt4 , "r");
@@ -35,4 +37,5 @@ crabGraphics(7) = drawLine(pt4 , pt8 , "r");
 crabGraphics(8) = drawLine(pt2 , pt9 , "r");
 crabGraphics(9) = drawLine(pt10 , pt11 , "r");
 crabGraphics(10) = drawLine(pt3 , pt12 , "r");
+
 endfunction

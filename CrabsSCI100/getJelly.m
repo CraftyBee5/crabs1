@@ -1,5 +1,5 @@
 
-function jelly = getJelly (sizeJelly)
+function jelly = getJelly (size)
 
 %right side
   pt1=[-7*size;size;1];
@@ -16,7 +16,7 @@ function jelly = getJelly (sizeJelly)
 
   %left side
   pt10=[-5*size;-size;1];
-  pt11=[-3*size;2*size;1];
+  pt11=[-3*size;-2*size;1];
   pt12=[-size;-size;1];
   pt13=[size;-size;1];
 
